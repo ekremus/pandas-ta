@@ -48,10 +48,10 @@ def pmax(high, low, close, length=None, multiplier=None, offset=None, **kwargs):
     # Prepare DataFrame to return
     _props = f"_{length}_{multiplier}"
     df = DataFrame({
-            f"SUPERT{_props}": trend,
-            f"SUPERTd{_props}": dir_,
-            f"SUPERTl{_props}": long,
-            f"SUPERTs{_props}": short,
+            f"PMAX{_props}": trend,
+            f"PMAXd{_props}": dir_,
+            f"PMAXl{_props}": long,
+            f"PMAXs{_props}": short,
         }, index=close.index)
 
     df.name = f"SUPERT{_props}"
